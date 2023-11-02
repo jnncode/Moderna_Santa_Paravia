@@ -1,0 +1,91 @@
+* {
+  font-family: 'VT323', monospace;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
+  text-align: center;
+  background-color: #000000;
+}
+
+.container {
+  display: block;
+  border-style: solid;
+  border-color: #FFFFFF;
+  width: 800px;
+  height: 600px;
+}
+
+.header {
+  color: #FFFFFF;
+  display: flex;
+}
+
+.credits {
+  position: relative;
+  display: inline-flex;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  top: 50px;
+}
+
+.start-btn {
+  position: fixed;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 20px 40px;
+  border-color: #FFFFFF;
+  transform: translateX(-50%) translateY(650%); 
+}
+
+.instructions {
+  position: relative;
+  display: inline-flex;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  top: 50px;
+}
+
+.instructions-btn {
+  position: fixed;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 20px 40px;
+  border-color: #FFFFFF;
+  transform: translateX(-50%) translateY(500%); 
+}
+
+.continue-btn {
+  position: relative;
+  display: block;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); 
+  background: #000000;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.start-btn:hover, .instructions-btn:hover, .continue-btn:hover {
+  cursor: pointer;
+  background-color: #484848;
+}
+
+img {
+  width: 175px;
+  height: 175px;
+}
+
+#left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+
+#right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
