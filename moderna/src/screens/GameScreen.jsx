@@ -19,6 +19,7 @@ import MarketPlace from './marketPlace/MarketPlace.jsx';
 import WoodenMill from './woodenMill/WoodenMill.jsx';
 import Palace from './palace/Palace.jsx';
 import Cathedral from './cathedral/Cathedral.jsx'; 
+import SerfPlatoon from './serfPlatoon/SerfPlatoon.jsx';
 
 const GameScreen = (props) => {
     const [currentScreen, setCurrentScreen] = CurrentScreenState('currentScreen', 'start');
@@ -95,6 +96,10 @@ const GameScreen = (props) => {
         setCurrentScreen('cathedral');
     }
 
+    const switchToSerfPlatoonPage = () => {
+        setCurrentScreen('serfPlatoon');
+    }
+
     let renderedScreen;
     switch (currentScreen) {
         case 'test':
@@ -137,7 +142,7 @@ const GameScreen = (props) => {
             renderedScreen = <Justice switchToStateRevenuePage={switchToStateRevenuePage} />;
             break;
         case 'cityBuild':
-            renderedScreen = <CityBuild switchToMainMenuPage={switchToMainMenuPage} switchToMarketPlacePage={switchToMarketPlacePage} switchToWoodenMillPage={switchToWoodenMillPage} switchToPalacePage={switchToPalacePage} switchToCathedralPage={switchToCathedralPage} />;
+            renderedScreen = <CityBuild switchToMainMenuPage={switchToMainMenuPage} switchToMarketPlacePage={switchToMarketPlacePage} switchToWoodenMillPage={switchToWoodenMillPage} switchToPalacePage={switchToPalacePage} switchToCathedralPage={switchToCathedralPage} switchToSerfPlatoonPage={switchToSerfPlatoonPage} />;
             break;
         case 'marketPlace':
             renderedScreen = <MarketPlace switchToCityBuildPage={switchToCityBuildPage} />;
@@ -150,6 +155,9 @@ const GameScreen = (props) => {
             break;
         case 'cathedral':
             renderedScreen = <Cathedral switchToCityBuildPage={switchToCityBuildPage} />;
+            break;
+        case 'serfPlatoon':
+            renderedScreen = <SerfPlatoon switchToCityBuildPage={switchToCityBuildPage} />;
             break;
         default:
             break;

@@ -7,7 +7,8 @@ const WoodenMill = (props) => {
 
     const updateWoodenMill = () => {
         const millAmount = parseFloat(inputValue);
-        if (millAmount > 0 && millAmount <= gameData.treasury) { 
+        const price = 2000;
+        if (millAmount > 0 && millAmount * price <= gameData.treasury) { 
             setGameData(prevGameData => ({
                 ...prevGameData,
                 mills: millAmount
@@ -25,7 +26,9 @@ const WoodenMill = (props) => {
                 <h2>Wooden Mill</h2>
             </div>
             <div className='cb-report'>
-                <h4>Current Amount: {gameData.mills}<br /></h4>
+                <h4>Current Amount: {gameData.mills}</h4>
+                <h4>Treasury: {gameData.treasury}</h4>
+                <h4>Price: 2000</h4>
             </div>
             <div>
                 <input type='number' id='millAmount' value={inputValue} onChange={handleInputChange} />

@@ -7,10 +7,12 @@ const MarketPlace = (props) => {
 
     const updateMarketPlace = () => {
         const marketAmount = parseFloat(inputValue);
-        if (marketAmount > 0 && marketAmount <= gameData.treasury) { 
+        const price = 1000;
+        if (marketAmount > 0 && gameData.treasury >= price) { 
             setGameData(prevGameData => ({
                 ...prevGameData,
-                marketPlace: marketAmount
+                marketPlace: marketAmount,
+                treasury: prevGameData.treasury - marketAmount * price
             }));
         } else { alert('Invalid input.'); }
     }
@@ -25,7 +27,9 @@ const MarketPlace = (props) => {
                 <h2>Market Place</h2>
             </div>
             <div className='cb-report'>
-                <h4>Current Amount: {gameData.marketPlace}<br /></h4>
+                <h4>Current Amount: {gameData.marketPlace}</h4>
+                <h4>Treasury: {gameData.treasury}</h4>
+                <h4>Price: 1000 florins</h4>
             </div>
             <div>
                 <input type='number' id='marketAmount' value={inputValue} onChange={handleInputChange} />

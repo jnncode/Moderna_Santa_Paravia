@@ -40,11 +40,11 @@
   position: relative;
   background: #000000;
   color: #FFFFFF;
-  padding: 20px 40px;
+  padding: 10px 20px;
   border-color: #FFFFFF;
   margin-right: 10px;
 }
-.btn:hover, .continue-btn:hover, #buyGrain:hover, #sellGrain:hover, #buyLand:hover, #sellLand:hover, #minimumReleaseGrain:hover, #maximumReleaseGrain:hover, #grainRelease:hover, #setCustomsDuty:hover, #setSalesTax:hover, #setIncomeTax:hover, #setJustice:hover, #marketPlace:hover, #woodenMill:hover, #palace:hover, #cathedral:hover, .exit:hover {
+.btn:hover, .continue-btn:hover, #buyGrain:hover, #sellGrain:hover, #buyLand:hover, #sellLand:hover, #minimumReleaseGrain:hover, #maximumReleaseGrain:hover, #grainRelease:hover, #setCustomsDuty:hover, #setSalesTax:hover, #setIncomeTax:hover, #setJustice:hover, #marketPlace:hover, #setMarket:hover, #woodenMill:hover, #setMill:hover, #palace:hover, #setPalace:hover, #cathedral:hover, #setCathedral:hover, #serfPlatoon:hover, #setPlatoon:hover, .exit:hover {
   cursor: pointer;
   background-color: #484848;
 }
@@ -53,8 +53,8 @@
   transform: translateY(550%);
 }
 
-#grainMarket, #landOffice, #customsDuty, #salesTax, #incomeTax, #justice, #marketPlace, #woodenMill, #palace, #cathedral {
-  transform: translateY(450%);
+#grainMarket, #landOffice, #customsDuty, #salesTax, #incomeTax, #justice, #marketPlace, #woodenMill, #palace, #cathedral, #serfPlatoon {
+  transform: translateY(515%);
 }
 
 .continue-btn {
@@ -69,7 +69,7 @@
   transform: translateY(400%);
 }
 #mmcont {
-  transform: translateX(-195%) translateY(900%);
+  transform: translateX(-155%) translateY(900%);
 }
 #cpcont {
   transform: translate(-50%) translateY(700%);
@@ -78,10 +78,10 @@
   transform: translateX(-50%) translateY(700%);
 }
 #stcont {
-  transform: translateX(-325%) translateY(900%);
+  transform: translateX(-245%) translateY(900%);
 }
 #cbcont {
-  transform: translateX(-355%) translateY(900%);
+  transform: translateX(-340%) translateY(900%);
 }
 
 .report {
@@ -93,7 +93,7 @@
 .cb-report {
   position: relative;
   display: block;
-  transform: translateY(450%);
+  transform: translateY(225%);
 }
 
 .justice {
@@ -111,7 +111,7 @@
   gap: 40px;
 }
 
-#startHeader, #instructionsHeader, #grainAndLandHeader, #grainMarketHeader, #landOfficeHeader, #grainReleaseHeader, #cityPopulationHeader, #stateRevenueHeader, #customsDutyHeader, #salesTaxHeader, #incomeTaxHeader, #justiceHeader, #marketPlaceHeader, #woodenMillHeader, #palaceHeader, #cathedralHeader {
+#startHeader, #instructionsHeader, #grainAndLandHeader, #grainMarketHeader, #landOfficeHeader, #grainReleaseHeader, #cityPopulationHeader, #stateRevenueHeader, #customsDutyHeader, #salesTaxHeader, #incomeTaxHeader, #justiceHeader, #marketPlaceHeader, #woodenMillHeader, #palaceHeader, #cathedralHeader, #serfPlatoonHeader {
   position: relative;
   display: block;
   transform: translateY(300%);
@@ -126,14 +126,14 @@
   margin-right: 10px;
 }
 
-#grainAmount, #landAmount, #grainReleaseAmount, #customsAmount, #salesAmount, #incomeAmount, #justiceAmount, #marketAmount, #millAmount, #palaceAmount, #cathedralAmount {
+#grainAmount, #landAmount, #grainReleaseAmount, #customsAmount, #salesAmount, #incomeAmount, #justiceAmount, #marketAmount, #millAmount, #palaceAmount, #cathedralAmount, #platoonAmount {
   position: relative;
   transform: translateY(500%);
   height: 25px;
   font-size: 15px;
 }
 
-#buyGrain, #sellGrain, #buyLand, #sellLand, #grainRelease, #setCustomsDuty, #setSalesTax, #setIncomeTax, #setJustice, #setMarket, #setMill, #setPalace, #setCathedral {
+#buyGrain, #sellGrain, #buyLand, #sellLand, #grainRelease, #setCustomsDuty, #setSalesTax, #setIncomeTax, #setJustice, #setMarket, #setMill, #setPalace, #setCathedral, #setPlatoon {
   position: relative;
   background: #000000;
   color: #FFFFFF;
