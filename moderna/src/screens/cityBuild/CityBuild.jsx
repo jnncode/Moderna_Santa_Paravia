@@ -31,7 +31,7 @@ const CityBuild = (props) => {
                 <button className='btn' id='palace' onClick={props.switchToPalacePage}>Buy Palace</button>           
                 <button className='btn' id='cathedral' onClick={props.switchToCathedralPage}>Buy Cathedral</button>
                 <button className='btn' id='serfPlatoon' onClick={props.switchToSerfPlatoonPage}>Buy Soldiers</button>        
-                <button onClick={props.switchToMainMenuPage} className='continue-btn' id='cbcont'>Next</button>
+                <button onClick={props.switchToEndPage} className='continue-btn' id='cbcont'>Next</button>
             </div>
         </Fragment>
     );

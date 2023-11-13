@@ -8,14 +8,20 @@ export function generateRandom(min, max) {
 };
 
 export const GameDataProvider = ({ children }) => {
+    const [isBankrupt, setIsBankrupt] = useState(false);
+    const [hasWon, setHasWon] = useState(false);
+    const [level, setLevel] = useState(1);
 
     // Arrays of data values
+    /*  
     const title = ['NOBLE', 'MONARCH', 'REGENT', 'SOVEREIGN', 'RULER'];
     const cityTitles = ['SANTA PARAVIA', 'FIUMACCIO', 'TORRICELLA', 'MOLINETTO', 'FONTANILE', 'ROMANGA'];
-    const years = Array.from({ length: 31 }, (_, i) => 1400 + i); // Year 1400 - 1430
+    const years = Array.from({ length: 31 }, (_, i) => 1400 + i); // Year 1400 - 1430 
+    */
     const weatherState = ['BAD', 'NORMAL', 'GOOD', 'EXCELLENT'];
     const harvestState = ['POOR', 'FINE', 'AVERAGE', 'GREAT'];
 
+    /*  
     const causeOfDeath = [
         'OF OLD AGE AFTER A LONG REIGN', 
         'OF PNEUMONIA AFTER A COLD WINTER IN A DRAFTY CASTLE', 
@@ -23,7 +29,8 @@ export const GameDataProvider = ({ children }) => {
         'OF TYPHOID AFTER DRINKING CONTAMINATED WATER',
         'AFTER BEING ATTACKED BY ROBBERS WHILE TRAVELING',
         'OF FOOD POISONING'
-    ];
+    ]; 
+    */
     
     const rats = generateRandom(0, 51); 
     const weatherIndex = generateRandom(0, weatherState.length - 1);
@@ -123,41 +130,6 @@ export const GameDataProvider = ({ children }) => {
         return { customsDutyRevenue, salesTaxRevenue, incomeTaxRevenue, justiceRevenue };
     }
     const { customsDutyRevenue, salesTaxRevenue, incomeTaxRevenue, justiceRevenue } = generateRevenue();
-
-    const limit10 = (numerator, denominator) => {
-        const value = Math.trunc(numerator / denominator);
-        return (value > 10 ? 10 : value);
-    }
-    const changeTitle = () => {
-        let total = limit10(marketPlace, 1);
-        total += limit10(cathedral, 1);
-        total += limit10(mills, 1);
-        total += limit10(treasury, 5000);
-        total += limit10(land, 6000);
-        total += limit10(merchants, 50);
-        total += limit10(nobles, 5);
-        total += limit10(soldiers, 50);
-        total += limit10(clergy, 10);
-        total += limit10(serfs, 2000);
-        total += limit10(Math.trunc(publicWorks * 100), 500)
-
-        titleNum = Math.trunc((total / difficulty) - justice) - 1;
-
-        if (titleNum > 7) { titleNum = 7; }
-        if (titleNum < 0) { titleNum = 0; }
-
-        if (titleNum > oldTitle) { oldTitle = titleNum; changeTitle(); }
-    }
-
-    const deathScreen = () => {
-        if (year > 1450) {
-            causeOfDeath[1];
-        }
-    }
-
-    const levelUpScreen = () => {
-
-    }
     
     const initialState = {
         year: parseInt(year),
