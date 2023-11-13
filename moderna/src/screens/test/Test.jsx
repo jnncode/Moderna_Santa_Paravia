@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const TestPage = (props) => {
+const Test = (props) => {
     return (
         <Fragment>
             <div className='header'>
@@ -11,4 +11,4 @@ const TestPage = (props) => {
         </Fragment>
    );
 }
-export default TestPage;
+export default Test;
