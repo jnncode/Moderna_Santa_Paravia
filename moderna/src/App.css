@@ -25,16 +25,7 @@
   display: inline-flex;
   color: #FFFFFF;
   padding: 5px 10px;
-  top: 50px;
-}
-
-.start-btn {
-  position: fixed;
-  background: #000000;
-  color: #FFFFFF;
-  padding: 20px 40px;
-  border-color: #FFFFFF;
-  transform: translateX(-50%) translateY(650%); 
+  top: 120px;
 }
 
 .instructions {
@@ -42,38 +33,136 @@
   display: inline-flex;
   color: #FFFFFF;
   padding: 5px 10px;
-  top: 50px;
+  top: 120px;
 }
 
-.instructions-btn {
-  position: fixed;
+.btn {
+  position: relative;
   background: #000000;
   color: #FFFFFF;
   padding: 20px 40px;
   border-color: #FFFFFF;
-  transform: translateX(-50%) translateY(500%); 
+  margin-right: 10px;
+}
+.btn:hover, .continue-btn:hover, #buyGrain:hover, #sellGrain:hover, #buyLand:hover, #sellLand:hover, #minimumReleaseGrain:hover, #maximumReleaseGrain:hover, #grainRelease:hover, #setCustomsDuty:hover, #setSalesTax:hover, #setIncomeTax:hover, #setJustice:hover, #marketPlace:hover, #woodenMill:hover, #palace:hover, #cathedral:hover, .exit:hover {
+  cursor: pointer;
+  background-color: #484848;
+}
+
+#start {
+  transform: translateY(550%);
+}
+
+#grainMarket, #landOffice, #customsDuty, #salesTax, #incomeTax, #justice, #marketPlace, #woodenMill, #palace, #cathedral {
+  transform: translateY(450%);
 }
 
 .continue-btn {
+  position: absolute;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 10px 40px;
+  border-color: #FFFFFF;
+}
+
+#i-cont {
+  transform: translateY(400%);
+}
+#mmcont {
+  transform: translateX(-195%) translateY(900%);
+}
+#cpcont {
+  transform: translate(-50%) translateY(700%);
+}
+#grcont {
+  transform: translateX(-50%) translateY(700%);
+}
+#stcont {
+  transform: translateX(-325%) translateY(900%);
+}
+#cbcont {
+  transform: translateX(-355%) translateY(900%);
+}
+
+.report {
   position: relative;
   display: block;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%); 
+  transform: translateY(250%);
+}
+
+.cb-report {
+  position: relative;
+  display: block;
+  transform: translateY(450%);
+}
+
+.justice {
+  position: relative;
+  display: block;
+  transform: translateY(125%);
+}
+
+.stats {
+  display: flex;
+  transform: translateY(300%);
+}
+.tableHeader, .tableData {
+  display: flex;
+  gap: 40px;
+}
+
+#startHeader, #instructionsHeader, #grainAndLandHeader, #grainMarketHeader, #landOfficeHeader, #grainReleaseHeader, #cityPopulationHeader, #stateRevenueHeader, #customsDutyHeader, #salesTaxHeader, #incomeTaxHeader, #justiceHeader, #marketPlaceHeader, #woodenMillHeader, #palaceHeader, #cathedralHeader {
+  position: relative;
+  display: block;
+  transform: translateY(300%);
+}
+
+.gm-options, .lo-options, .gr-options {
+  position: relative;
+  transform: translateX(0%) translateY(700%);
+}
+
+#buyGrainInput, #sellGrainInput, #buyLandInput, #sellLandInput {
+  margin-right: 10px;
+}
+
+#grainAmount, #landAmount, #grainReleaseAmount, #customsAmount, #salesAmount, #incomeAmount, #justiceAmount, #marketAmount, #millAmount, #palaceAmount, #cathedralAmount {
+  position: relative;
+  transform: translateY(500%);
+  height: 25px;
+  font-size: 15px;
+}
+
+#buyGrain, #sellGrain, #buyLand, #sellLand, #grainRelease, #setCustomsDuty, #setSalesTax, #setIncomeTax, #setJustice, #setMarket, #setMill, #setPalace, #setCathedral {
+  position: relative;
   background: #000000;
   color: #FFFFFF;
   padding: 5px 10px;
-  text-decoration: none;
+  border-color: #FFFFFF;
+  transform: translateY(650%);
 }
 
-.start-btn:hover, .instructions-btn:hover, .continue-btn:hover {
-  cursor: pointer;
-  background-color: #484848;
+.exit {
+  position: relative;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-color: #FFFFFF;
+  transform: translateY(750%);
 }
 
 img {
   width: 175px;
   height: 175px;
+}
+
+#minimumReleaseGrain, #maximumReleaseGrain {
+  position: relative;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-color: #FFFFFF;
+  transform: translateY(600%);
 }
 
 #left {

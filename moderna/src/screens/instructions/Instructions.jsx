@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react';
 
 // React fragment
-const InstructionsPage = (props) => {
+const Instructions = (props) => {
     return (
         <Fragment>
-            <div className='header'>
-                <h1>Instructions</h1>
+            <div className='header' id='instructionsHeader'>
+                <h2>Instructions</h2>
             </div>
             <div className='instructions'>
-                <h4>1. Begin by managing resources - balance the city's finances, food supply, and population growth.
+                <h4>
+                    1. Begin by managing resources - balance the city's finances, food supply, and population growth.
                     <br /><br />
                     2. Make strategic decisions - set taxes, build infrastructure, and trade resources.
                     <br /><br />
@@ -18,9 +19,9 @@ const InstructionsPage = (props) => {
                 </h4>
             </div>
             <div>
-                <button className='instructions-btn' onClick={props.switchToMainMenuPage}>Next</button>
+                <button className='btn' id='i-cont' onClick={props.switchToMainMenuPage}>Next</button>
             </div>
         </Fragment>
     );
 }
-export default InstructionsPage;
+export default Instructions;
