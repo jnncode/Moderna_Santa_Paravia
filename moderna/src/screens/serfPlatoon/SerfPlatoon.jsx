@@ -12,7 +12,7 @@ const SerfPlatoon = (props) => {
         if (platoonAmount > 0 && gameData.treasury >= price) { 
             setGameData(prevGameData => ({
                 ...prevGameData,
-                soldiers: platoonAmount * perPlatoon,
+                soldiers: prevGameData.soldiers + platoonAmount * perPlatoon,
                 serfs: prevGameData.serfs - prevGameData.soldiers,
                 treasury: prevGameData.treasury - platoonAmount * price
             }));
