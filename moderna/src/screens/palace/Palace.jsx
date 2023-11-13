@@ -7,10 +7,12 @@ const Palace = (props) => {
 
     const updatePalace = () => {
         const palaceAmount = parseFloat(inputValue);
-        if (palaceAmount > 0 && palaceAmount <= gameData.treasury) { 
+        const price = 3000;
+        if (palaceAmount > 0 && gameData.treasury >= price) { 
             setGameData(prevGameData => ({
                 ...prevGameData,
-                palace: palaceAmount
+                palace: palaceAmount,
+                treasury: prevGameData.treasury - palaceAmount * price
             }));
         } else { alert('Invalid input.'); }
     }
@@ -25,7 +27,9 @@ const Palace = (props) => {
                 <h2>Palace</h2>
             </div>
             <div className='cb-report'>
-                <h4>Current Amount: {gameData.palace}<br /></h4>
+                <h4>Current Amount: {gameData.palace}</h4>
+                <h4>Treasury: {gameData.treasury}</h4>
+                <h4>Price: 3000</h4>
             </div>
             <div>
                 <input type='number' id='palaceAmount' value={inputValue} onChange={handleInputChange} />

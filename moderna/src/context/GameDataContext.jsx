@@ -34,7 +34,10 @@ export const GameDataProvider = ({ children }) => {
     const harvest = harvestState[harvestIndex];
     const grainReserve = 5000;
 
+    let year = 1400;
     let titleNum = 1;
+    let oldTitle = 1;
+    let difficulty = 1;
     let treasury = 1000;
     const land = 10000;
     let nobles = 4;
@@ -120,9 +123,46 @@ export const GameDataProvider = ({ children }) => {
         return { customsDutyRevenue, salesTaxRevenue, incomeTaxRevenue, justiceRevenue };
     }
     const { customsDutyRevenue, salesTaxRevenue, incomeTaxRevenue, justiceRevenue } = generateRevenue();
+
+    const limit10 = (numerator, denominator) => {
+        const value = Math.trunc(numerator / denominator);
+        return (value > 10 ? 10 : value);
+    }
+    const changeTitle = () => {
+        let total = limit10(marketPlace, 1);
+        total += limit10(cathedral, 1);
+        total += limit10(mills, 1);
+        total += limit10(treasury, 5000);
+        total += limit10(land, 6000);
+        total += limit10(merchants, 50);
+        total += limit10(nobles, 5);
+        total += limit10(soldiers, 50);
+        total += limit10(clergy, 10);
+        total += limit10(serfs, 2000);
+        total += limit10(Math.trunc(publicWorks * 100), 500)
+
+        titleNum = Math.trunc((total / difficulty) - justice) - 1;
+
+        if (titleNum > 7) { titleNum = 7; }
+        if (titleNum < 0) { titleNum = 0; }
+
+        if (titleNum > oldTitle) { oldTitle = titleNum; changeTitle(); }
+    }
+
+    const deathScreen = () => {
+        if (year > 1450) {
+            causeOfDeath[1];
+        }
+    }
+
+    const levelUpScreen = () => {
+
+    }
     
     const initialState = {
+        year: parseInt(year),
         titleNum: parseInt(titleNum),
+        difficulty: parseInt(difficulty),
         rats: parseFloat(rats),
         weather: weather,
         harvest: harvest,
@@ -153,7 +193,6 @@ export const GameDataProvider = ({ children }) => {
         serfs: parseInt(serfs),
         deadSerfs: 0,
         bornSerfs: 0,
-        year: 1400,
         fleeingSerfs: 0,
         soldierPay: parseFloat(soldierPay),
         soldiers: parseInt(soldiers),

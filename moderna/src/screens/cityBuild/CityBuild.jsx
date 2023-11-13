@@ -28,8 +28,9 @@ const CityBuild = (props) => {
             <div className='cb-options'>
                 <button className='btn' id='marketPlace' onClick={props.switchToMarketPlacePage}>Buy Market Place</button>
                 <button className='btn' id='woodenMill' onClick={props.switchToWoodenMillPage}>Buy Wooden Mill</button>        
-                <button className='btn' id='palace' onClick={props.switchToPalacePage}>Buy Palance</button>           
-                <button className='btn' id='cathedral' onClick={props.switchToCathedralPage}>Buy Cathedral</button>         
+                <button className='btn' id='palace' onClick={props.switchToPalacePage}>Buy Palace</button>           
+                <button className='btn' id='cathedral' onClick={props.switchToCathedralPage}>Buy Cathedral</button>
+                <button className='btn' id='serfPlatoon' onClick={props.switchToSerfPlatoonPage}>Buy Soldiers</button>        
                 <button onClick={props.switchToMainMenuPage} className='continue-btn' id='cbcont'>Next</button>
             </div>
         </Fragment>
