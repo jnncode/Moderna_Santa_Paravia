@@ -33,6 +33,7 @@ const End = (props) => {
                 <h4>Market Place: {gameData.marketPlace}</h4>
                 <h4>Wooden Mill: {gameData.mills}</h4>
                 <h4>Palace: {gameData.palace}</h4>
+                <h4>Cathedral {gameData.cathedral}</h4>
             </h4>
             <button onClick={handleEnd} className='btn' id='econt'>Next</button>
         </div>
