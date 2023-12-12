@@ -10,5 +10,5 @@ Magazine Issue of TRS-80 Game: https://archive.org/details/softside-magazine-03/
 - Web Storage and Rendering
 - Tree Structuring
 
-### Deliverables 
+### Stack 
 React
