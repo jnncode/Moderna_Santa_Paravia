@@ -11,4 +11,4 @@ Magazine Issue of TRS-80 Game: https://archive.org/details/softside-magazine-03/
 - Tree Structuring
 
 ### Stack 
-React
+React, JSX, CSS
